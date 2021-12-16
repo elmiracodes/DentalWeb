@@ -1,0 +1,59 @@
+﻿
+body {
+    
+    background-color: white;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.hejsan {
+    
+    color: deepskyblue;
+    font-weight: bold;
+    font-family: Cambria
+}
+
+.hejsan2 {
+   
+    color: deepskyblue;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Cambria
+}
+
+p {
+    color: black;
+}
+
+#Corona {
+    font-family: Bookman Old Style;
+    color: dimgray;
+}
+
+.CoronaTab {
+ 
+    background-color: white;
+
+}
+
+.Mejl{
+          color: white;
+      }
+
+
+.nav {
+    color: white;
+}
+
+.container{
+    color: white;
+}
+
+
+
+
+
+
+
+

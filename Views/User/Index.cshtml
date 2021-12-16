@@ -1,0 +1,45 @@
+﻿@model DentalWeb.Models.UserLogin
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+   
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    @using (Html.BeginForm())
+    {
+
+
+        <h1>Mina Sidor</h1>
+        <h3>
+            Här på Mina sidor kan du bland annat ändra eller avboka din tid, <br /> lista dig och din familj samt se ditt aktuella tandvårdsstöd. <br />
+            <br />
+            Fyll i användarnamn och lösenord för att logga in.
+        </h3>
+
+        <table>
+            <tr>
+                <td>Användarnamn</td>
+                <td>@Html.EditorFor(m => m.UserName)</td>
+            </tr>
+            <tr>
+                <td>Lösenord</td>
+                <td>@Html.PasswordFor(m => m.Password)</td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Logga in" /></td>
+
+            </tr>
+        </table>
+        <p>@Html.ActionLink("Logga ut", "SignOut")</p>
+        <p>@ViewBag.ErrorMessage</p>
+    }
+</body>
+</html>

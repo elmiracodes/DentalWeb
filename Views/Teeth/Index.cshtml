@@ -1,0 +1,99 @@
+﻿@model List<DentalWeb.Models.Teeth>
+@{
+    <link href="~/css/MinStil.css" rel="stylesheet" />
+}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").slideDown("slow");
+            });
+        });
+    </script>
+    <style>
+        #panel, #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: lightpink;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="~/bilder/beautiful-smile-young-woman-white-teeth_65293-2469.jpg" />
+    <h3>
+        Här på Dental West utför vi de allra flesta behandlingar som kan tänkas behövas. <br />
+        Detta innefattar traditionell tandvård, behandling av tandvårdsrädda, olika former <br />
+        av specialisttandvård samt estetisk tandvård.
+    </h3>
+
+
+
+    <!-- Visar upp alla värden i tabell listan-->
+    <table style="width:100%">
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td> @Html.DisplayFor(mbox => item.Namn)</td>
+                <td> @Html.DisplayFor(mbox => item.Beskrivning)</td>
+            </tr>
+        }
+    </table>
+
+    <br />
+
+    <div id="flip">Söker du akuttandvård?</div>
+    <div id="panel">
+
+        På Dental West i Trollhättan tar vi alltid emot dig med akuta besvär.
+        Ring vårt journummer på 051-396 92 00 för att boka en akuttid.
+        <br /> <br />
+        <h3> Exempel på akuta tandbesvär: </h3>
+        <br />
+        Kraftig tandvärk, bultande smärta
+        <br />
+        Extrema ilningar i tänderna
+        <br />
+        Visdomstand som gör ont
+        <br />
+        Skadat tänder vid olycksfall
+        <br />
+        Slagit ut en permanent tand
+        </br>
+        Bro eller tandkrona som lossnat
+        <br />
+        Fyllning eller plomb lossnat
+        <br />
+        Oförmåga att tugga eller bita
+    </div>
+
+    <br />
+    <img src="~/bilder/dentist-man-holding-tools-isolated-white-wall-laughing_1368-92368.jpg" />
+    <table>
+        <tr>
+            <td>
+                <h2>Har du ett önskemål om en behandling som ej står med i listan?</h2>
+                @Html.ActionLink("Skriv ditt önskemål här", "Create")
+            </td>
+        </tr>
+    </table>
+
+    <br />
+    <br />
+
+
+
+</body>
+</html>

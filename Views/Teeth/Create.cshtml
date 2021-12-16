@@ -1,0 +1,38 @@
+﻿@model DentalWeb.Models.Teeth
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+  
+</head>
+<body>
+    <!-- Skapar ett formulär -->
+    <!-- Den kommer skicka modellen till controllern-->
+    @using (Html.BeginForm())
+    {
+        <p>
+            Namn: <br />
+            @Html.EditorFor(m => m.Namn)
+        </p>
+        <p>
+            Beskrivning: <br />
+            @Html.EditorFor(m => m.Beskrivning)
+        </p>
+        <p>
+            <input type="submit" name="name" value="Lägg till ny behandling" />
+
+        </p>
+
+    }
+
+
+    <br />
+
+</body>
+</html>
